@@ -1,9 +1,19 @@
 *{
-	font-family: 'Merriweather', serif;
-	color: #C1C4C7;
+	font-family: 'Raleway', serif;
+	color: gray;
 }
 
-#wrapper {
+input,
+textarea, 
+button,
+select {
+		font-family: 'Raleway', serif;
+		border: 0;
+		border-radius: 5px;
+}
+
+#wrapper,
+#banner {
 	width: 70%;
 	margin: 0 auto;
 }
@@ -12,10 +22,14 @@ header {
 	text-align: center;
 }
 
+#banner {
+	background: #0f59c2;
+	text-align: center;
+}
+
 h1 {
 	font-size: 1em;
 	color: white;
-	background: #2C3945;
 	margin-top: 0;
 	padding: 20px 0;
 	text-transform: uppercase;
@@ -23,19 +37,19 @@ h1 {
 
 h2 {
 	font-size: 1em;
-	color: #2C3945;
+	color: #0f59c2;
 	padding-top: 10px;
 }
 
 header p {
 	font-size: .8em;
 	padding-bottom: 30px;
-	border-bottom: 5px solid #2C3945;
+	border-bottom: 5px solid #0f59c2;
 	margin-bottom: 3px;
 }
 
 #main-header {
-	border-bottom: 2px solid #2C3945;
+	border-bottom: 2px solid #0f59c2;
 	margin-top:;
 }
 
@@ -45,26 +59,38 @@ fieldset {
 
 #contact {
 	margin: 0 -10px;
-	border-bottom: 2px solid #2C3945;
+	border-bottom: 2px solid #0f59c2;
 	padding-bottom: 25px;
 }
-
-
 
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
 	background-color: #EFF0F1;
 	width: 100%;
-	padding: 15px 0;
-	border: none;
-	border-radius: 5px;
-	margin: 5px 0;
-	color: #2C3945;
+	padding: 15px 0 15px 10px;
+	margin: 10px 0;
+	color: #555;
+	box-sizing: border-box;
+	transition: background-color .3s ease;
 }
 
-input:focus {
-	border: 2px solid #2C3945;
+input:required:invalid:focus {
+	box-shadow: 0 0 0 2px red;
+	background-color: rgba(255,0,0,.1);
+}
+
+input:required:valid:focus {
+	box-shadow: 0 0 0 2px green;
+}
+
+input:focus,
+textarea:focus {
+	box-shadow: 0 0 0 2px #0f59c2;
+	transition: box-shadow .2s ease;
+}
+
+select:focus {
 }
 
 label {
@@ -73,26 +99,31 @@ label {
 	color: #758490;
 }
 
-input[placeholder="Required"] {
+input::-webkit-input-placeholder {
 	text-align: right;
 	font-style: italic;
-	font-size: .5em;
+	font-size: .7em;
+	padding: 2px 25px 0 0;
 }
 
 select {
 	width: 100%;
 	height: 3.5em;
 	background: #EFF0F1;
-	font-family: 'Merriweather', serif;
 	font-size: .8em;
+	margin: 10px 0;
+}
+
+label[for="zip"] {
+	display: block;
 }
 
 #zip {
-	width: 25%;
+	width: 150px;
 }
 
-#newsletter {
-	margin-left: -10px;
+fieldset #newsletter {
+	margin: -11.5px;
 }
 
 input[type="radio"],
@@ -104,20 +135,19 @@ textarea {
 	background: #EFF0F1;
 	width: 100%;
 	margin: 10px 0 20px;
-	border: none;
-	border-radius: 5px;
 	height: 7em;
+	color: #555;
+	font-size: .9em;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: box-shadow .3s ease;
 }
 
 button {
-	background-color: #4EBBB4;
+	background-color: #0f59c2;
 	color: white;
-	display: block;
 	width: 100%;
-	border: none;
-	border-radius: 5px;
-	padding: 20px;
-	font-family: 'Merriweather', serif;
+	padding: 20px 0;
 }
 
 footer {
@@ -128,7 +158,27 @@ footer {
 
 /*Media Queries*/
 @media screen and (min-width:768px) {
-	#wrapper {
+	#banner {
 		width: 100%;
+	}
+	
+	#wrapper {
+		width: 550px;
+	}
+	
+	#contact label {
+		width: 150px;
+		display: inline-block;
+	}
+	
+	#contact input,
+	#contact select {
+		display: inline-block;
+		width: 400px;
+		margin-left: -10px;
+	}
+	
+	#zip {
+		width: 150px !important;
 	}
 }
