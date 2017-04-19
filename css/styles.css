@@ -42,7 +42,7 @@ h2 {
 }
 
 header p {
-	font-size: .8em;
+	font-size: .9em;
 	padding-bottom: 30px;
 	border-bottom: 5px solid #0f59c2;
 	margin-bottom: 3px;
@@ -68,7 +68,7 @@ input[type="email"],
 input[type="tel"] {
 	background-color: #EFF0F1;
 	width: 100%;
-	padding: 15px 0 15px 10px;
+	padding: 15px 25px 15px 10px;
 	margin: 10px 0;
 	color: #555;
 	box-sizing: border-box;
@@ -94,7 +94,7 @@ select:focus {
 }
 
 label {
-	font-size: .75em;
+	font-size: .85em;
 	padding: 5px 0;
 	color: #758490;
 }
@@ -103,21 +103,20 @@ input::-webkit-input-placeholder {
 	text-align: right;
 	font-style: italic;
 	font-size: .7em;
-	padding: 2px 25px 0 0;
+	padding: 2px;
 }
 
 input::-moz-placeholder {
 	text-align: right;
 	font-style: italic;
 	font-size: .7em;
-	padding: 2px 25px 0 0;
+
 }
 
 input:-ms-input-placeholder {
 	text-align: right;
 	font-style: italic;
 	font-size: .7em;
-	padding: 2px 25px 0 0;
 }
 
 select {
