@@ -7,9 +7,9 @@ input,
 textarea, 
 button,
 select {
-		font-family: 'Raleway', serif;
-		border: 0;
-		border-radius: 5px;
+	font-family: 'Raleway', serif;
+	border: 0;
+	border-radius: 5px;
 }
 
 #wrapper,
