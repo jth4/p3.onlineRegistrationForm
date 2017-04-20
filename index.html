@@ -23,12 +23,14 @@
 		     </div>   
 		</header>
 	     
-	        <h2>Contact Information</h2>
+	        
 
         
-        <form action="index.html" method="push">
+        <form action="index.html" method="post">
 	        <fieldset>
 		        <div id="contact">
+		        	<legend>Contact Information</legend>
+		        	
 			        <label for="name">Full Name</label>
 			        <input type="text" id="name" name="user_name" placeholder="Required" required>
 			        
@@ -121,10 +123,9 @@
         </fieldset>
         
         
-        <h2>Newsletter</h2>
-        
         <fieldset>
         	<div id="newsletter">
+        		<legend>Newsletter</legend>
 		        <label>Select the newsletters you would like to receive</label>
 		        <br><br>
 		        <input type="checkbox" id="html_news" value="html_news" name="newsletter"><label for="html_news">HTML News</label>
