@@ -42,9 +42,10 @@ legend {
 	padding-top: 10px;
 }
 
-fieldset legend {
+legend {
 	font-weight: bold;
 	padding: 25px 0;
+	margin-left: -10px;
 }
 
 header p {
